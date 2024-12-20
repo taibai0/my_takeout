@@ -39,6 +39,9 @@
         <fastjson>1.2.83</fastjson>
         <jjwt>0.9.1</jjwt>
         <commons>2.6</commons>
+        <mysql-connector>8.0.30</mysql-connector>
+        <druid>1.2.22</druid>
+        <websocket>3.4.0</websocket>
     </properties>
     <dependencyManagement>
         <dependencies>
@@ -71,6 +74,24 @@
                 <groupId>commons-lang</groupId>
                 <artifactId>commons-lang</artifactId>
                 <version>${commons}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-websocket</artifactId>
+                <version>${websocket}</version>
             </dependency>
 
         </dependencies>
