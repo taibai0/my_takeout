@@ -64,6 +64,7 @@ public class WebMvcConfig extends WebMvcConfigurationSupport {
      * 设置静态资源映射
      */
     protected void addResourceHandlers(ResourceHandlerRegistry registry) {
+        log.info("开始静态资源映射");
         registry.addResourceHandler("/doc.html").addResourceLocations("classpath:/META-INF/resources/");
         registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
     }

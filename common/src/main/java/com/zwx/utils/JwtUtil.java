@@ -39,8 +39,8 @@ public class JwtUtil {
         //得到DefaultJwtParser
         Claims claims = Jwts.parser()
                 .setSigningKey(secretKey.getBytes(StandardCharsets.UTF_8))
-                // 设置需要解析的jwt
-                .parseClaimsJwt(token).getBody();
+                // 设置需要解析的jwt,方法是jws不是jwt！！！！
+                .parseClaimsJws(token).getBody();
         return claims;
     }
 }
